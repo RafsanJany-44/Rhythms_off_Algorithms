@@ -19,13 +19,13 @@ int Partition(int A[],int pivot,int last_index){
     return index+1;
 }
 
-void quickSort(int A[], int pivot, int last_index)
+void quickSort(int A[], int start, int end)
 {
-    if  (pivot >= last_index)
+    if  (start >= end)
         return;
-    int p = Partition(A, pivot, last_index);
-    quickSort(A, pivot, p - 1);
-    quickSort(A, p + 1, last_index);
+    int p = Partition(A, start, end);
+    quickSort(A, start, p - 1);
+    quickSort(A, p + 1, end);
 }
 
 
