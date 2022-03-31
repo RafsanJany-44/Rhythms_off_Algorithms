@@ -19,20 +19,22 @@ int Partition(int A[],int pivot,int last_index){
     return index+1;
 }
 
-void quickSort(int A[],int last_index,int pivot){
-    if(pivot<last_index){
-        int q=Partition(A,pivot,last_index);
-        quickSort(A,pivot,q-1);
-        quickSort(A,q+1,last_index);
-    }
-    for (int i = 0; i <=6; i++) {
-        cout << A[i] << "  ";
-    }
-    //return A;
+void quickSort(int A[], int pivot, int last_index)
+{
+    if  (pivot >= last_index)
+        return;
+    int p = Partition(A, pivot, last_index);
+    quickSort(A, pivot, p - 1);
+    quickSort(A, p + 1, last_index);
 }
 
 
 int main(){
-    int a[6]={1,5,0,6,4};
-    Partition(a,0,4);
+    int arr[] = { 9, 3, 4, 2, 1, 8 };
+    int n = 6;
+    quickSort(arr, 0, n - 1);
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    return 0;
 }
