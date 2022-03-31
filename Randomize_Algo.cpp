@@ -40,14 +40,3 @@ int RandomizeAlgo(int A[],int start,int end,int index){
 int  main(){
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
