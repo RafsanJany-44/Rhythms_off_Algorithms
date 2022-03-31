@@ -26,10 +26,20 @@ int RandomizeAlgo(int A[],int start,int end,int index){
 
     int mid=Partition(A,start,end);
     int rank=mid-start+1;
-    
+    if (rank==index){
+        return A[index];
+    }
+    else if(rank<index)
+    {
+        return RandomizeAlgo(A,mid+1,end,index); 
+    }
+    else if(rank>index)
+        return RandomizeAlgo(A,start,mid-1,index);
     
 }
-int  main(){}
+int  main(){
+    return 0;
+}
 
 
 
