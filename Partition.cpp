@@ -1,13 +1,6 @@
 #include<iostream>
 using namespace std;
 
-void swap(int a,int b){
-    int temp=a;
-    a=b;
-    b=temp;
-}
-
-
 int Partition(int A[],int last_index,int pointer){
     int last_element=A[last_index];
     int index=pointer-1;
@@ -18,9 +11,8 @@ int Partition(int A[],int last_index,int pointer){
             swap(A[j],A[index]);
         }
     }
-    cout<<A[index+1]<<"  "<<A[last_index]<<endl;
     swap(A[index+1],A[last_index]);
-   for (int i = 1; i < 6; ++i) {
+    for (int i = 1; i < 6; ++i) {
         cout << A[i] << "  ";
     }
     return index+1;
