@@ -1,10 +1,10 @@
 #include<iostream>
 using namespace std;
 
-int Partition(int A[],int last_index,int pointer){
+int Partition(int A[],int last_index,int pivot){
     int last_element=A[last_index];
-    int index=pointer-1;
-    for(int j=pointer;j<=last_index-1;j++){
+    int index=pivot-1;
+    for(int j=pivot;j<=last_index-1;j++){
         if(A[j]<=last_element)
         {
             index=index+1;
@@ -15,6 +15,7 @@ int Partition(int A[],int last_index,int pointer){
     for (int i = 0; i <=last_index; i++) {
         cout << A[i] << "  ";
     }
+    cout << endl;
     return index+1;
 }
 
