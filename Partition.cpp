@@ -18,8 +18,11 @@ int Partition(int A[],int last_index,int pointer){
             swap(A[j],A[index]);
         }
     }
+    cout<<A[index+1]<<"  "<<A[last_index]<<endl;
     swap(A[index+1],A[last_index]);
-    //cout<<A;
+   for (int i = 1; i < 6; ++i) {
+        cout << A[i] << "  ";
+    }
     return index+1;
 }
 
