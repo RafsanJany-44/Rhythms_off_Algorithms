@@ -21,8 +21,9 @@ int Partition(int A[],int pivot,int last_index){
 
 void quickSort(int A[], int start, int end)
 {
-    if  (start >= end)
+    if  (start >= end){
         return;
+    }
     int p = Partition(A, start, end);
     quickSort(A, start, p - 1);
     quickSort(A, p + 1, end);
